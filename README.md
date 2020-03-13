@@ -10,3 +10,11 @@ Actualmente este proceso se  basa en métodos algebraicos y la manipulación de 
 
 `git -clone https://github.com/laurasofia180/Restauracion-de-Imagenes-.git`
 
+
+## Metodos para la restauracion de imagenes 
+
+### Interpolación de Laplace 
+
+Este método de interpolación esta espacializado en restaurar datos de una matriz con datos perdidos.
+la explicacion facil es que para cada valor perdido en el interior de la  matriz se toma un promedio sobre los 4 valores circundantes a este, para el caso de los borrdes aplican unas reglas diferentes.
+Hay que tener encuenta que este metodo solo funciona bien para las funciones harmonicas y esta optimizado para imagenes de calor.
