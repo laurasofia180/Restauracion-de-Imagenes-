@@ -4,12 +4,29 @@ Las técnicas de restauración han evolucionado a lo largo del tiempo.
 Actualmente este proceso se  basa en métodos algebraicos y la manipulación de grandes sistemas de ecuaciones para recuperar la imagen.
 
 ### Prerequsitos 
-*Python 3.8
+* Python >= 3.6
+* Pip
+* Virtualenv
 
 ### Instalación
 
-`git -clone https://github.com/laurasofia180/Restauracion-de-Imagenes-.git`
+`$ git clone https://github.com/laurasofia180/Restauracion-de-Imagenes-.git`
 
+`$ cd Restauracion-de-Imagenes-`
+
+Si no existe Pip - `$ easy_install pip3`
+
+`$ python3 -m pip install virtualenv`
+
+`$ virtualenv venv`
+
+`$ source venv/bin/activate`
+
+`$ pip install -r requirements.txt`
+
+`$ cd src`
+
+`$ python main.py`
 
 ## Metodos para la restauracion de imagenes 
 
