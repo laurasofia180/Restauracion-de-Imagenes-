@@ -143,7 +143,7 @@ def interpolar(matriz_operacional, bad_array):
 
 def main():
     # Leer imagen - Blanco y negro para un solo canal de color.
-    image = Image.open('./imagenes/1280x720.jpg').convert('RGB')
+    image = Image.open('./imagenes/cat.jpg').convert('RGB')
 
     value = [int(x / 2) for x in image.size]
     image = image.resize(value)
@@ -182,6 +182,9 @@ def main():
     axarr[2].imshow(Image.fromarray(bad_array))
     axarr[2].set_title("Interpolada con Laplace")
     plt.show()
+    Image.fromarray(image_array).save("./comparacion/imagenes/original.jpg")
+    Image.fromarray(bad_array_copy).save("./comparacion/imagenes/danada.jpg")
+    Image.fromarray(bad_array).save("./comparacion/imagenes/restaurada.jpg")
 
 
 if __name__ == '__main__':
