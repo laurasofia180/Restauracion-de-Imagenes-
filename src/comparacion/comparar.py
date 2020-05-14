@@ -15,7 +15,7 @@ restaurada_bw = np.array(Image.open("imagenes/restaurada.jpg").convert("LA"))
 
 original_color = np.array(Image.open("imagenes/original.jpg"))
 danada_color = np.array(Image.open("imagenes/danada.jpg"))
-restaurada_color = np.array(Image.open("imagenes/restaurada.jpg"))
+restaurada_color = np.array(Image.open(" vvimagenes/restaurada.jpg"))
 
 logger.info("------ SIMILAR A BLANCO NEGRO ------")
 logger.info("         ------ SSIM ------")

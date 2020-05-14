@@ -143,9 +143,9 @@ def interpolar(matriz_operacional, bad_array):
 
 def main():
     # Leer imagen - Blanco y negro para un solo canal de color.
-    image = Image.open('./imagenes/cat.jpg').convert('RGB')
+    image = Image.open('./imagenes/ballenita.jpg').convert('RGB')
 
-    value = [int(x / 2) for x in image.size]
+    value = [int(x / 3) for x in image.size]
     image = image.resize(value)
 
     image_array = np.array(image)
