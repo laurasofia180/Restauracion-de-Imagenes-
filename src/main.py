@@ -145,12 +145,12 @@ def main():
     # Leer imagen - Blanco y negro para un solo canal de color.
     image = Image.open('./imagenes/image1.jpg').convert('RGB')
 
-    value = [int(x / 2) for x in image.size]
+    value = [int(x/1) for x in image.size]
     image = image.resize(value)
 
     image_array = np.array(image)
     bad_array = image_array.copy()
-    # Daño el array
+    # Dano el array
     for i in range(len(bad_array)):
         for j in range(len(bad_array[0])):
             if random.random() < 0.5:
@@ -178,7 +178,7 @@ def main():
     axarr[0].imshow(Image.fromarray(image_array))
     axarr[0].set_title("Original")
     axarr[1].imshow(Image.fromarray(bad_array_copy))
-    axarr[1].set_title("Dañada")
+    axarr[1].set_title("Danada")
     axarr[2].imshow(Image.fromarray(bad_array))
     axarr[2].set_title("Interpolada con Laplace")
     plt.show()
