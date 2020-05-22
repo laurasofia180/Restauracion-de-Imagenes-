@@ -10,7 +10,7 @@ logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 
 original = np.array(Image.open("ImagenesGen/original.jpg").convert("LA"))
-restaurada = np.array(Image.open("ImagenesGen/restaurada.jpg").convert("LA"))
+restaurada = np.array(Image.open("ImagenesGen/Ivan2.jpg").convert("LA"))
 
 logger.info("------ SIMILAR A BLANCO NEGRO ------")
 logger.info("         ------ SSIM ------")

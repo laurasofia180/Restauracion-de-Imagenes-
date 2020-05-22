@@ -143,9 +143,9 @@ def interpolar(matriz_operacional, bad_array):
 
 def main():
     # Leer imagen - Blanco y negro para un solo canal de color.
-    image = Image.open('./imagenes/image1.jpg').convert('RGB')
+    image = Image.open('./imagenes/Antigua2.jpg').convert('RGB')
 
-    value = [int(x/1) for x in image.size]
+    value = [int(x/2) for x in image.size]
     image = image.resize(value)
 
     image_array = np.array(image)
@@ -153,8 +153,8 @@ def main():
     # Dano el array
     for i in range(len(bad_array)):
         for j in range(len(bad_array[0])):
-            if random.random() < 0.5:
-                # Pixel malo
+            if random.random() < 0.25:
+                #Pixel malo
                 bad_array[i, j] = [255, 255, 255]
     bad_array_copy = bad_array.copy()
     # Proceso
