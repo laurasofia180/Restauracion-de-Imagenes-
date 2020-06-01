@@ -12,8 +12,11 @@ def laplace(array, image):
     m = image.width
     n = image.height
 
+    # A
     matrix = np.zeros((m * n, m * n))
+    # b
     rhs = np.zeros(m * n)
+    # x
     guess = np.zeros(m * n)
     guesstmp = 0
     inner = False
@@ -21,6 +24,7 @@ def laplace(array, image):
     k = 0
     for i in range(0, m):
         for j in range(0, n):
+            # Top
             inner = False
             if i == 0:
                 i1 = 0
@@ -104,7 +108,8 @@ start = time.time()
 # Leer imagen - Blanco y negro para un solo canal de color.
 image = Image.open('../imagenes/cat.jpg').convert('RGB')
 
-value = [int(x / 4) for x in image.size]
+# Reducir tamaño de la imagen
+value = [int(x / 12) for x in image.size]
 image = image.resize(value)
 
 imageArray = np.array(image)
@@ -142,5 +147,10 @@ axarr[1].imshow(Image.fromarray(imageArray))
 axarr[1].set_title("Danada")
 axarr[2].imshow(Image.fromarray(rgbArray))
 axarr[2].set_title("Interpolada con Laplace")
+
+Image.fromarray(original).save("../comparacion/imagenes/original_mejorada.jpg")
+Image.fromarray(imageArray).save("../comparacion/imagenes/danada_mejorada.jpg")
+Image.fromarray(rgbArray).save("../comparacion/imagenes/restaurada_mejorada.jpg")
+
 plt.show()
 print("Se demoró: " + str(round(time.time() - start, 3)))
